@@ -36,7 +36,7 @@ module.exports = function(el, choices, options) {
     set: function (w, i) {
       i = Number.isInteger(i) ? i : el.selectionStart - 1
       el.value = bounds.replace(w, el.value + ' ', i)
-      el.selectionStart = el.selectionEnd = bounds.START + w.length + 1
+      el.selectionStart = el.selectionEnd = i + w.length + 1
     },
 
     select: function (n) {
